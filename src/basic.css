@@ -1,0 +1,61 @@
+/**
+ *  yCarousel
+ *  一款简单的Carousel Jquery插件
+ *
+ *  Author: yeliex
+ *          yeliex.com
+ *  website: work.yeliex.com/carousel
+ *
+ *  version :1.2
+ *  date: 2015-09-18
+ */
+
+body {
+    margin: 0;
+}
+.carousel {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-transition: background 1s ease;
+    -moz-transition: background 1s ease;
+    -ms-transition: background 1s ease;
+    -o-transition: background 1s ease;
+    transition: background 1s ease;
+    background-size: cover;
+}
+
+.carousel .list {
+    display: none;
+}
+
+.carousel .content {
+    background: rgba(0, 0, 0, .2);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    position: absolute;
+    cursor: pointer;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.carousel .content .a {
+    margin-top: 236px;
+    margin-bottom: 10px;
+    font-size: 60px;
+    line-height: 76px;
+}
+
+.carousel .content .b {
+    font-size: 24px;
+}
