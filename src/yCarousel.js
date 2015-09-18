@@ -112,7 +112,7 @@ $(function () {
         target.attr('style', styleStr);
         if (obj.content.content == "true") {
             var a = item.attr('data-content').split("/")[0];
-            var b = item.attr('data-content').split("/")[0];
+            var b = item.attr('data-content').split("/")[1];
             setContent(obj.target, a, b);
         }
         else {
