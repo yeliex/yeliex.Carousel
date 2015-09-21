@@ -6,8 +6,8 @@
  *          yeliex.com
  *  website: work.yeliex.com/carousel
  *
- *  version :1.2
- *  date: 2015-09-18
+ *  version :1.4
+ *  date: 2015-09-21
  */
 
 $(function () {
@@ -30,14 +30,13 @@ $(function () {
         setInterval(function () {
             // 获取下一个的序号
             var next = Number(obj.current) + 1;
-            if (next == (obj.list.length+1)) next = 1;
+            if (next == (obj.list.length + 1)) next = 1;
             // 设置图片
             var item = obj.list[next - 1];
-            console.log(item);
             setBG(item.img, item.link, obj.target);
             if (obj.content.content == "true") {
                 var content = obj.content.list[next - 1];
-                setContent(obj.target, content.a, content.b);
+                setContent(obj.target, content.a, content.b, content.btn);
             }
             else {
                 $(target).html(" ");
@@ -83,7 +82,8 @@ $(function () {
                 for (var i = 0; i < list.length; i++) {
                     result[i] = {
                         a: $(list[i]).attr('data-content').split("/")[0],
-                        b: $(list[i]).attr('data-content').split("/")[1]
+                        b: $(list[i]).attr('data-content').split("/")[1],
+                        btn: $(list[i]).attr('data-btn')
                     }
                 }
             }
@@ -113,7 +113,8 @@ $(function () {
         if (obj.content.content == "true") {
             var a = item.attr('data-content').split("/")[0];
             var b = item.attr('data-content').split("/")[1];
-            setContent(obj.target, a, b);
+            var btn = item.attr('data-btn');
+            setContent(obj.target, a, b, btn);
         }
         else {
             $(target).html(" ");
@@ -134,7 +135,7 @@ $(function () {
         target.attr('style', styleStr);
     }
 
-    function setContent(target, a, b) {
+    function setContent(target, a, b, btn) {
         // 设置内容
         // 需要先隐藏再显示以避免闪烁,如果图片较大或加载慢需要增加动画hide(),show()时间
         $(target).children(".content").children().hide();
@@ -143,6 +144,7 @@ $(function () {
             htmlStr += "<div class='a'>" + a + "</div>";
             htmlStr += "<div class='b'>" + b + "</div>";
         }
+        htmlStr += (btn == null)?(" "):("<div class='ui huge button inverted'>"+btn+"</div>");
         htmlStr += "</div>";
         $(target).html(htmlStr);
         $(target).children(".content").children().show();
