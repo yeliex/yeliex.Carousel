@@ -6,8 +6,8 @@
  *          yeliex.com
  *  website: work.yeliex.com/carousel
  *
- *  version :1.2
- *  date: 2015-09-18
+ *  version :1.4
+ *  date: 2015-09-21
  */
 
 body {
@@ -58,4 +58,62 @@ body {
 
 .carousel .content .b {
     font-size: 24px;
+}
+
+.carousel .content .button {
+    margin-top: 4rem;
+    font-weight: normal;
+    padding: .78571429em 3em;
+}
+
+.ui.button {
+    cursor: pointer;
+    display: inline-block;
+    min-height: 1em;
+    outline: 0;
+    border: none;
+    vertical-align: baseline;
+    background: #e0e1e2;
+    color: rgba(0, 0, 0, .6);
+    font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    margin: 0 .25em 0 0;
+    padding: .78571429em 1.5em;
+    text-transform: none;
+    text-shadow: none;
+    font-weight: 700;
+    line-height: 1em;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    border-radius: .28571429rem;
+    box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(34, 36, 38, .15) inset;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: opacity .1s ease, background-color .1s ease, color .1s ease, box-shadow .1s ease, background .1s ease;
+    transition: opacity .1s ease, background-color .1s ease, color .1s ease, box-shadow .1s ease, background .1s ease;
+    will-change: '';
+    -webkit-tap-highlight-color: transparent;
+    transition: all 1s ease;
+}
+
+.ui.button {
+    font-size: 1rem;
+}
+
+.ui.inverted.button {
+    box-shadow: 0 0 0 2px #fff inset !important;
+    background: 0 0;
+    color: #fff;
+    text-shadow: none !important;
+}
+.ui.inverted.button:hover {
+  background: #FFF;
+  color: #000;
+  transition: all 1s ease;
+}
+
+.ui.huge.button {
+    font-size: 1.42857143rem;
 }

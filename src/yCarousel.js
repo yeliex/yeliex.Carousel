@@ -6,7 +6,7 @@
  *          yeliex.com
  *  website: work.yeliex.com/carousel
  *
- *  version :1.3
+ *  version :1.4
  *  date: 2015-09-21
  */
 
